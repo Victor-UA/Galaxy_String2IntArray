@@ -507,6 +507,7 @@ class Orbit {
         }
     }
 }
+
 class GalaxyElementInfo {
     constructor(galaxyWrapper, myGalaxyElement) {
         var me = this;
