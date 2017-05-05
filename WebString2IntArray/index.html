@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css"> 
+    <link rel="stylesheet" type="text/css" href="./css/style.css"> 
+    <script src="scripts/jquery-3.1.1.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/myGalaxy.js"></script>
+</head>
+<body>
+    <div class="galaxy-button-block">
+        <input id="galaxy-stop" class="galaxy-button" type="button" value="0" />
+        <input id="galaxy-pause" class="galaxy-button" type="button" value="||" />
+        <input id="galaxy-tracked" class="galaxy-button" type="button" value="MT" />
+    </div>
+    
+    <div class="section section1">
+        <form id="form1">
+            <input id="input1" type="text" placeholder="Вставте текст"/>
+            <input id="inputParseSym" type="text" placeholder="Зазначте розподільник" /> <br />
+            <div class="input">
+                <input id="isCode" type="checkbox" value="0" /><label for="isCode">Розподільник є кодом символа</label>
+            </div>
+        </form>
+        <table id="outputTable" cellpadding="0" cellspacing="0">
+        </table>
+        <div id="outputBlock">
+            <div id="outputValues">
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="galaxy-wrapper"></div>
+</body>
+</html>
