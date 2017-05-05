@@ -149,10 +149,10 @@
                         me.setLastTime();
                         var dx = 0;
                         var dy = 0;
-                        if (me.getTargetX() != null) {
+                        if (me.getTargetX() !== null) {
                             dx = me.getTargetX() - me.getX();
                         }
-                        if (me.getTargetY() != null) {
+                        if (me.getTargetY() !== null) {
                             dy = me.getTargetY() - me.getY();
                         }
                         var dist = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
@@ -164,10 +164,10 @@
                         var k = 1.05;
                         var dx = 0;
                         var dy = 0;
-                        if (me.getTargetX() != null) {
+                        if (me.getTargetX() !== null) {
                             dx = me.getTargetX() - me.getX();
                         }
-                        if (me.getTargetY() != null) {
+                        if (me.getTargetY() !== null) {
                             dy = me.getTargetY() - me.getY();
                         }
                         var dist = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
@@ -401,7 +401,7 @@ class GalaxyElement {
         me.removeChild = function (child) {
             if (Planets) {
                 for (var i = 0; i < Planets.length; i++) {
-                    if (Planets[i] = planet) {
+                    if (Planets[i] === planet) {
                         Planets[i] = Planets[Planets.length - 2];
                         Planets.length--;
                     }
@@ -422,7 +422,7 @@ class GalaxyElement {
             
             var childAlpha = Random(Math.PI * 2 * 1000) / 1000;
             var childSpeed = (Random(1) < 1 ? -1 : 1) * 
-                (me.getLevel() == 1 ? me.getSpeed() / 40 : me.getSpeed() * 5);
+                (me.getLevel() === 1 ? me.getSpeed() / 40 : me.getSpeed() * 5);
             var childSize = me.getSize() / 4 - Random(me.getSize() / 4) + 1;
             var childColor = Color * 2;
             Childs[index] = new childClass(
@@ -689,9 +689,9 @@ function getDocumentWidth(element) {
         var ua = navigator.userAgent.toLowerCase();
         var isOpera = (ua.indexOf('opera') > -1);
         var isIE = (!isOpera && ua.indexOf('msie') > -1);
-        return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode == 'CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth : (document.parentWindow || document.defaultView).innerWidth;
+        return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode === 'CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth : (document.parentWindow || document.defaultView).innerWidth;
     }
-    return Math.max(document.compatMode != 'CSS1Compat' ? document.body.scrollWidth : document.documentElement.scrollWidth, getViewportWidth());
+    return Math.max(document.compatMode !== 'CSS1Compat' ? document.body.scrollWidth : document.documentElement.scrollWidth, getViewportWidth());
     //return element.clientWidth;
 }
 function getDocumentHeight(element) {
@@ -699,8 +699,8 @@ function getDocumentHeight(element) {
         var ua = navigator.userAgent.toLowerCase();
         var isOpera = (ua.indexOf('opera') > -1);
         var isIE = (!isOpera && ua.indexOf('msie') > -1);
-        return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode == 'CSS1Compat') ? document.documentElement.clientHeight : document.body.clientHeight : (document.parentWindow || document.defaultView).innerHeight;
+        return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode === 'CSS1Compat') ? document.documentElement.clientHeight : document.body.clientHeight : (document.parentWindow || document.defaultView).innerHeight;
     }
-    return Math.max(document.compatMode != 'CSS1Compat' ? document.body.scrollHeight : document.documentElement.scrollHeight, getViewportHeight());
+    return Math.max(document.compatMode !== 'CSS1Compat' ? document.body.scrollHeight : document.documentElement.scrollHeight, getViewportHeight());
    // return element.clientHeight;
 }
